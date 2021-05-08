@@ -1,0 +1,8 @@
+<string>:72:21:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: element line 25 and taxes
+<string>:86:19:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: itemization line 24 and element
+<string>:87:19:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: root line 2 and itemization
+<string>:88:5:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document
+<string>:72:21:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: element line 25 and taxes
+<string>:86:19:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: itemization line 24 and element
+<string>:87:19:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: root line 2 and itemization
+<string>:88:5:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document

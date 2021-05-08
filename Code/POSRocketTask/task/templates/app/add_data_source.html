@@ -1,0 +1,62 @@
+{% extends 'app/index.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h2 class="pageheader-title">
+                Validator
+            </h2>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- end pageheader  -->
+<!-- ============================================================== -->
+<div class="ecommerce-widget">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="card">
+                <h5 class="card-header">Add File</h5>
+                <div class="card-body">
+                    <form
+                            action="{% url 'upload' %}"
+                            method="POST"
+                            enctype="multipart/form-data"
+                    >
+                        {% csrf_token %}
+                        <div class="custom-file mb-3">
+                            <input
+                                    type="file"
+                                    class="custom-file-input"
+                                    name="myFile"
+                                    id="customFile"
+                                    required
+                            />
+                            <label class="custom-file-label" for="customFile">File Input</label>
+                        </div>
+                       {% if messages %}
+                             {% for message in messages %}
+                                {% if message.tags == 'success'%}
+                                 <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+                                {% elif message.tags == 'info' %}
+                                 <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+                                {% elif message.tags == 'warning' %}
+                                 <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+                                {% elif message.tags == 'error' %}
+                                 <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+                                {% endif %}
+                             {% endfor %}
+                        {% endif %}
+                        <div class="col-sm-6 pl-0">
+                            <button type="submit" class="btn btn-space btn-primary">
+                                Add
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

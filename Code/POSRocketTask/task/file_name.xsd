@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="_id" type="xs:string" />
+        <xs:element name="additive_tax_money">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="amount" type="xs:unsignedByte" />
+              <xs:element name="currency" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="business_id" type="xs:string" />
+        <xs:element name="creation_time" type="xs:dateTime" />
+        <xs:element name="creator">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="email" type="xs:string" />
+              <xs:element name="id" type="xs:string" />
+              <xs:element name="name" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dining_option" type="xs:string" />
+        <xs:element name="discount_money">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="amount" type="xs:unsignedByte" />
+              <xs:element name="currency" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inclusive_tax_money">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="amount" type="xs:unsignedShort" />
+              <xs:element name="currency" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="itemization">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="element">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="category">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="id" type="xs:string" />
+                          <xs:element name="name" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="discount_money">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="amount" type="xs:unsignedByte" />
+                          <xs:element name="currency" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="discounts" />
+                    <xs:element name="gross_sales_money">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="amount" type="xs:unsignedShort" />
+                          <xs:element name="currency" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="id" type="xs:string" />
+                    <xs:element name="modifiers">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="element">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="applied_money">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="amount" type="xs:unsignedByte" />
+                                      <xs:element name="currency" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="id" type="xs:string" />
+                                <xs:element name="name" type="xs:string" />
+                                <xs:element name="quantity" type="xs:unsignedByte" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="name" type="xs:string" />
+                    <xs:element name="net_sales_money">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="amount" type="xs:unsignedShort" />
+                          <xs:element name="currency" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="quantity" type="xs:unsignedByte" />
+                    <xs:element name="single_quantity_money">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="amount" type="xs:unsignedShort" />
+                          <xs:element name="currency" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="taxes">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="element">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="applied_money">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="amount" type="xs:unsignedShort" />
+                                      <xs:element name="currency" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="id" type="xs:string" />
+                                <xs:element name="inclusion_type" type="xs:string" />
+                                <xs:element name="is_custom_amount" type="xs:boolean" />
+                                <xs:element name="name" type="xs:string" />
+                                <xs:element name="rate" type="xs:decimal" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="total_money">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="amount" type="xs:unsignedShort" />
+                          <xs:element name="currency" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="variation">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="id" type="xs:string" />
+                          <xs:element name="name" type="xs:string" />
+                          <xs:element name="price_money">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="amount" type="xs:unsignedShort" />
+                                <xs:element name="currency" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="pricing_type" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="location_id" type="xs:string" />
+        <xs:element name="receipt_id" type="xs:string" />
+        <xs:element name="refunded_money">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="amount" type="xs:unsignedByte" />
+              <xs:element name="currency" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="serial_number" type="xs:string" />
+        <xs:element name="tax_money">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="amount" type="xs:unsignedShort" />
+              <xs:element name="currency" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="taxes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="element">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="applied_money">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="amount" type="xs:unsignedShort" />
+                          <xs:element name="currency" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="id" type="xs:string" />
+                    <xs:element name="inclusion_type" type="xs:string" />
+                    <xs:element name="is_custom_amount" type="xs:boolean" />
+                    <xs:element name="name" type="xs:string" />
+                    <xs:element name="rate" type="xs:decimal" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tender">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string" />
+              <xs:element name="total_money">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="amount" type="xs:unsignedShort" />
+                    <xs:element name="currency" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="type" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tip_money">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="amount" type="xs:unsignedByte" />
+              <xs:element name="currency" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="total_collected_money">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="amount" type="xs:unsignedShort" />
+              <xs:element name="currency" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="transaction_id" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
